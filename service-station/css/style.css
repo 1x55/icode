@@ -1,0 +1,96 @@
+/* Add CSS here */
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-color: #F1F4FE;
+      background: linear-gradient(#fff, #fefeff #f4f6fe, #f1f3fd);
+  }
+  .heading {
+    width: 100%;
+    height: 20vh;
+    padding: 20px 0 0 50px;
+    /* border: 2px solid black; */
+  }
+  
+  .heading h1 {
+    font-size: 45px;
+    width: 50%;
+    margin-bottom: 15px;
+    line-height: 1
+  }
+  
+  .heading h3 {
+    font-size: 22px;
+    color: rgba(125	134	157);
+    width: 58%;
+    line-height: 1.3
+  }
+  
+  .hero {
+    width: 100%;
+    height: 20vh;
+  /*   border: 2px solid red; */
+  /*   float: left; */
+    padding: 0 50px 0 50px;
+  
+  }
+  
+  .heroLeft {
+    width: 50%;
+    height: 100%;
+  /*   border: 2px solid blue; */
+    float: left;
+    background-color: white;
+  }
+  
+  .heroContent {
+    width: 80%;
+    height: 100%;
+  /*   border: 2px solid purple; */
+    float: right;
+  }
+  
+  .heroRight {
+    width: 50%;
+    height: 100%;
+  /*   border: 2px solid purple; */
+    float: left;
+    background-color: white;
+  }
+  
+  footer {
+    margin-top: 50px;
+    padding: 0 50px 0 50px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: blue
+  }
+  
+  .fa-solid, .fa-brands {
+    font-size: 50px;
+    padding: 10px;
+  }
+  
+  .hero h4 {
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px
+  }
+  
+  .hero p {
+    color:  RGB(67, 97, 117);
+  }
+  
