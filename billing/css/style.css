@@ -1,0 +1,264 @@
+/* Add CSS here */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-content: center;
+    background: #e8e9fd;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    background: #fff;
+    gap: 2rem
+}
+
+.leftCol {
+    flex-basis: 20%;
+    height: 100%;
+    background: #ddddff;
+    padding: 2.5rem 2rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 45px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-right: 0.8rem
+}
+
+.nameTag p:first-child {
+    font-weight: 600;
+    font-size: 1rem
+}
+
+.nameTag p:last-child {
+    font-size: .7rem;
+    color: rgb(117, 111, 111);
+}
+
+/* Categories column */
+.categories {
+    margin-top: 2.5rem;
+}
+
+.columnItem {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.columnItem:hover i{
+  color: purple;
+}
+
+#highLight:hover{
+  color: rgb(31, 30, 30);
+}
+
+.columnItem span, .logOut {
+    font-size: .8rem;
+    color: rgb(117, 111, 111);
+}
+
+
+.columnItem i {
+    width: 20px;
+    margin-right: 0.9rem;
+    /* border: 1px solid black; */
+}
+
+.logOut {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 12rem;
+}
+
+.logOut i {
+    width: 20px;
+    margin-right: 0.5rem;
+    transition: all 0.3s
+}
+
+.logOut:hover i {
+    transform: scale(1.5)
+}
+
+
+.middleCol > h1 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.middleCol h1 + p {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 2.4rem;
+}
+
+.middleCol p + p {
+    font-size: 0.7rem;
+     color: #9f9fa7;
+}
+
+/* date column */
+.dateCol {
+    width: 500px;
+    display: flex;
+    margin-top: 1rem;
+    color: rgb(24, 23, 23);
+    gap: 6rem;
+}
+
+.date, .type, .receipt {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column
+}
+
+.dateCol span {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.dateCol .title {
+    color: #9f9fa7;
+    margin-bottom: 0.2rem
+}
+
+.receipt button {
+    padding: 0.3rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    border: 1px solid #9f9fa7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.receipt button:hover {
+    background-color: #3c3c3d;
+    color: #fff
+}
+
+.loadBtn button {
+    background: none;
+    border: none;
+    color: red;
+    text-decoration: underline
+}
+
+.payment {
+    margin-top: 2.5rem;
+}
+
+.payment > h3 {
+    font-weight: 700;
+}
+
+.payment p {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #3c3c3d;
+}
+
+
+.visaImg i {
+    font-size: 35px;
+    color: blue;
+    padding-right: 0.5rem
+}
+
+.visaImg span {
+    font-size: 0.7rem;
+    color: #3c3c3d;
+    font-weight: 500;
+}
+
+.visaImg div {
+    /* border: 1px solid black; */
+    display: flex;
+    /* margin-top: 1rem; */
+    align-items: center;
+}
+
+.visaImg {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.visaImg button {
+    padding: 0.1rem .8rem;
+    border: 1px solid #9f9fa7;
+    margin-bottom: 0.3rem;
+    margin-right: 5.5rem;
+    background: none;
+    border-radius: 5px;
+    transition: all 0.3s; 
+}
+
+.visaImg button:hover {
+    background: #3c3c3d;
+    color: white;
+}
+
+/* box */
+.box {
+    margin-top: 5rem;
+    background: #ee4e39;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.box h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.box p {
+    font-size: 0.7rem;
+}
+
+#cancelBtn {
+    border: 1px solid white;
+    padding: 0.4rem 1rem;
+    margin-top: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
