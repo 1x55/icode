@@ -1,0 +1,335 @@
+:root {
+    --bg-body: #f8f9fd;
+    --bg-accounts-section: #fff;
+    --bg-wallet-actions: #fff;
+    --bg-selected-wallet: #e7e6fb;
+    --bg-btns: #8842c1;
+    --font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::width-scroll-track {
+    /* background: red; */
+    border-radius: 10px;
+}
+
+body {
+    /* border: 5px solid green; */
+    margin: 0;
+    min-height: 100vh;
+    background-color: va(--bg-body);
+    display: grid;
+    place-items: center
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+button {
+    cursor: not-allowed;
+}
+
+.accounts_section {
+    background: var(--bg-accounts-section);
+}
+
+.accounts_section h1 {
+    padding: 1.25rem 1.875rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.accounts_section > div {
+    /* border: 5px solid purple; */
+    border-top: .0625rem solid var(--bg-selected-wallet);
+    display: grid;
+    grid-template-columns: 23.43rem 36.87rem;
+    grid-template-rows: 52.5rem;
+}
+
+.wallets {
+    /* border: 1px solid red; */
+    border-right: 0.0625rem solid #e7e6fb; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wallets_list {
+    /* border: 5px solid blue; */
+    max-height: 40.625rem;
+    overflow: auto;
+}
+
+.new_account_btn {
+    width: 18rem;
+    height: 4rem;
+    border: none;
+    margin: 0.9375rem 1.875rem;
+    background: var(--bg-btns);
+    color: #fff;
+    padding: 0.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet {
+    border-bottom: 0.0625rem solid #e7e6fb;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    gap: 0.625rem;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+.wallet:hover {
+    background-color: var(--bg-selected-wallet);
+}
+
+.walle:last-of-type {
+    border-bottom: none;
+}
+
+.wallet_img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 .625rem #ccc;
+}
+
+.wallet_info > span {
+    /* border: 1px solid red; */
+    font-size: 0.9375rem;
+    display: block;
+}
+
+.wallet_info > span:nth-child(1){
+    font-weight: 700;
+}
+
+.wallet_info > span:nth-child(2){
+    font-weight: 500;
+}
+
+.wallet_info > span:nth-child(2) span {
+    opacity: 0.5;
+}
+
+.wallet_actions {
+    margin: 0.375rem 0 0;
+    display: flex;
+    gap: 0.625rem;
+}
+
+.wallet_actions > button {
+    /* border: 1px solid green; */
+    padding: 0.25rem 0.5rem;
+    background: var(--bg-wallet-actions);
+    border: 0.0625rem solid var(--bg-selected-wallet);
+    border-radius: 1.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.1875rem;
+}
+
+.deposit_btn img,
+.withdraw_btn img,
+.send_btn img,
+.receive_btn img {
+    width: 1.4375rem;
+    height: 1.4375rem;
+}
+
+.send_btn.inactive {
+    background: #eef1fa;
+    opacity: 0.6;
+}
+
+.transactions {
+    /* border: 5px solid green; */
+    padding: 0.9375rem 0.9375rem 0.4375rem;
+}
+
+.transactions h2 {
+    margin: 0 0 0 0.875rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.transactions_list{
+    /* border: 1px solid red; */
+    padding: 0 0.8125rem;
+    max-height: 49.4375rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.transactions_list.loading {
+    animation: transactions .8s;
+}
+
+.transaction {
+    /* border: 1px solid purple; */
+    padding: 0.875rem 0;
+    border-bottom: .0625rem solid #e7e6fb;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: scale .2s, background .2s;
+    cursor: pointer
+}
+
+.transaction:hover {
+    scale: 1.05;
+    background: #e7e6fb;
+}
+
+.transaction_date {
+    width: 2.5rem;
+    font-size: 0.87rem;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+}
+
+.transaction > img {
+    width: 1.68rem;
+    margin: 0 0 0 1.25rem;
+    border: 0.0625rem solid #e7e6fb;
+    border-radius: 50%
+}
+
+.transaction_info {
+    margin: 0 0 0 1.25rem;
+}
+
+.transaction_value {
+    text-align: right;
+    position: absolute;
+    right: 0;
+}
+
+.transaction_date > span,
+.transaction_info > span,
+.transaction_value > span {
+    display: block;
+}
+
+.transaction_info > span:nth-child(1),
+.transaction_value > span:nth-child(1) {
+    /* border: 1px solid green; */
+    font-weight: 700;
+}
+
+.transaction_info > span:nth-child(2),
+.transaction_value > span:nth-child(2) {
+    font-size: 0.8rem;
+    opacity: 0.6
+}
+
+.no_tranactions_info {
+    margin: 1.8rem 0 0;
+    font-size: 1.12rem;
+    font-weight: 600;
+    text-align: center;
+    color: blue
+}
+
+
+/* account creator */
+.account_creator {
+    /* border: 5px solid blue; */
+    background: #fff;
+    width: 28.125rem;
+    padding: 1.25rem 1.25rem 0.625rem;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:  99;
+}
+
+.account_creator p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.account_creator form {
+    margin: .25rem 0;
+}
+
+.form_control {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;;
+}
+
+.form_control input {
+    width: 70%;
+    padding: 0.625rem 1rem;
+    border: 0.0625rem solid #e7e6fb;;
+    border-radius: 1.25rem;
+}
+
+.form_control label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.create_btn,
+.close_btn {
+    margin: 0.93rem 0.62rem 0 0;
+    padding: 0.25rem 1.56rem;
+    border: none;
+    border-radius: 1.25rem;
+    background: var(--bg-btns);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.error {
+    margin: 0.31rem 0 0;
+    color: red;
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: 600
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.hidden {
+    display: none;
+}

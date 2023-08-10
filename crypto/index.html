@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Crypto</title>
+</head>
+
+<body>
+    <section class="accounts_section">
+        <h1>your accounts</h1>
+        <div>
+            <div class="wallets">
+                <div class="wallets_list">
+                    <div class="wallet selected">
+                        <img class="wallet_img" src="https://i.ibb.co/nLqdvY3/usd.png"" alt="image of dollar sign">
+                        
+                        <div class="wallet_info">
+                            <span>USD Wallet</span>
+                            <span>$254.00</span>
+                            <div class="wallet_actions">
+                                <button class="deposit_btn">
+                                    <img src="https://i.ibb.co/7KWXWRJ/deposit.png" alt="deposit button">Deposit
+                                </button>
+
+                                <button class="withdraw_btn">
+                                    <img src="https://i.ibb.co/5GP5CtM/withdraw.png" alt="withdraw button">Withdraw
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wallet">    
+                        <img class="wallet_img" src="https://i.ibb.co/3B8WLhG/btc.png" alt="bitcoin symbol">
+                        <div class="wallet_info">
+                            <span>BTC Wallet</span>
+                            <span>0.000 BTC ≈ <span>$0.00</span></span>
+                            <div class="wallet_actions">
+                                <button class="send_btn inactive">
+                                    <img src="https://i.ibb.co/FXhrBtw/send.png" alt="image of send arrow">Send
+                                </button>
+
+                                <button class="receive_btn">
+                                    <img src="https://i.ibb.co/dKMPr6S/receive.png" alt="image of receive QR code">receive
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wallet">
+                        <img class="wallet_img" src="https://i.ibb.co/hMytkV9/bch.png" alt="image of Bitcoin Cash symbol">
+                        <div class="wallet_info">
+                            <span>BCH Wallet</span>
+                            <span>0.000 BCH ≈ <span>$0.00</span></span>
+                            <div class="wallet_actions">
+                                <button class="send_btn inactive">
+                                    <img src="https://i.ibb.co/FXhrBtw/send.png" alt="image of send arrow">Send
+                                </button>
+
+                                <button class="receive_btn">
+                                        <img src="https://i.ibb.co/dKMPr6S/receive.png" alt="image of receive QR code">receive
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wallet">
+                        <img class="wallet_img" src="https://i.ibb.co/GC22mTt/eth.png" alt="Ethereum Symbol" >
+                        <div class="wallet_info">
+                            <span>ETH Wallet</span>
+                            <span>0.0236 ETH ≈ <span>$12.63</span> </span>
+                            <div class="wallet_actions">
+                                <button class="send_btn">
+                                    <img src="https://i.ibb.co/FXhrBtw/send.png" alt="image of send arrow">Send
+                                 </button>
+
+                                 <button class="receive_btn">
+                                        <img src="https://i.ibb.co/dKMPr6S/receive.png" alt="image of receive QR code">receive
+                                 </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wallet">
+                        <img class="wallet_img" src="https://i.ibb.co/Ky3fq4k/lc.png" alt="symbol for Litecoin">
+                        <div class="wallet_info">
+                            <span>LTC Wallet</span>
+                            <span>0.000 LTC ≈ <span>$0.00</span></span>
+
+                            <div class="wallet_actions">
+                                <button class="send_btn">
+                                    <img src="https://i.ibb.co/FXhrBtw/send.png" alt="image of send arrow">Send
+                                </button>
+
+                                <button class="receive_btn">
+                                                                        <img src="https://i.ibb.co/dKMPr6S/receive.png" alt="image of receive QR code">receive
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                <button class="new_account_btn">
+                    + new account
+                </button>
+
+                </div>
+            </div>
+
+            <section class="transactions">
+                <h2>transactions</h2>
+                <div class="transactions_list"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- new account creation -->
+    <div class="account_creator hidden">
+        <p>New Wallet</p>
+        <form action="#">
+            <div class="form_control">
+                <label for="new_wallet_name">Wallet Name</label>
+                <input type="text" id="new_wallet_name" placeholder="Min. 5 characters">
+                <small class="error hidden">Error</small>   
+            </div>
+
+            <div class="form_control">
+                <label for="new_wallet_name">Wallet Nickname</label>
+                <input type="text" id="new_wallet_name" placeholder="only 3 characters">
+                <small class="error hidden">Error</small>
+            </div>
+
+            <div class="form_control">
+                <label for="new_wallet_name">Wallet Image</label>
+                <input type="text" id="new_wallet_name" placeholder="Paste Image URL here">
+                <small class="error hidden">Error</small>
+            </div>
+            <button class="create_btn">Create</button>
+            <button class="close_btn">Close</button>
+        </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
